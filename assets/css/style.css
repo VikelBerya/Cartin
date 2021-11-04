@@ -1,20 +1,20 @@
 @font-face {
     font-family: "FuturaPT-Book";
-    src: url("/assets/fonts/FuturaPT-Book.ttf") format("truetype");
+    src: url("../fonts/FuturaPT-Book.ttf") format("truetype");
 }
 
 @font-face {
     font-family: "FuturaPT-Bold";
-    src: url("/assets/fonts/FuturaPT-Bold.ttf") format("truetype");
+    src: url("../fonts/FuturaPT-Bold.ttf") format("truetype");
     font-weight: bold;
 }
 
 @font-face {
     font-family: "FuturaPTMedium";
-    src: url("/assets/fonts/FuturaPTMedium.eot");
-    src: url("/assets/fonts/FuturaPTMedium.eot?#iefix") format("embedded-opentype"),
-    url("/assets/fonts/FuturaPTMedium.woff") format("woff"),
-    url("/assets/fonts/FuturaPTMedium.ttf") format("truetype");
+    src: url("../fonts/FuturaPTMedium.eot");
+    src: url("../fonts/FuturaPTMedium.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/FuturaPTMedium.woff") format("woff"),
+    url("../fonts/FuturaPTMedium.ttf") format("truetype");
     font-style: normal;
     font-weight: 450;
     font-display: swap;
@@ -22,13 +22,16 @@
 
 @font-face {
     font-family: "FuturaPT-Light";
-    src: url("/assets/fonts/FuturaPT-Light.ttf") format("truetype");
+    src: url("../fonts/FuturaPT-Light.ttf") format("truetype");
     font-weight: 300;
 }
 
 body {
     background-color: #FFFFFF;
-    margin: 0 62px;
+    background-image: url("/assets/img/circle.png");
+    background-repeat: no-repeat;
+    background-position: right -502px top 129px;
+
 }
 
 .logo {
@@ -80,24 +83,37 @@ body {
     justify-content: space-between;
     margin-top: 42px;
     align-items: center;
+    margin-left: 62px;
+    margin-right: 62px;
 }
 
-.h1 {
+.section__div__h1 {
     font-family: "FuturaPTMedium", serif;
     font-weight: 450;
     font-size: 62px;
     line-height: 70px;
     letter-spacing: 0.1em;
     color: #12253B;
-    margin-top: 174px;
     margin-bottom: 0;
+    margin-top: 0;
+}
+
+.section {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 62px;
+
+}
+
+.section__div {
+    margin-top: 174px;
 }
 
 p {
     margin: 0;
 }
 
-.p1 {
+.section__div__p {
     display: block;
     width: 330px;
     font-family: 'Roboto', sans-serif;
@@ -121,7 +137,6 @@ p {
     height: 66px;
     border: none;
     margin-top: 56px;
-    margin-left: 4px;
 }
 
 .btn__order:hover {
@@ -149,8 +164,7 @@ p {
 }
 
 .parameters {
-    margin-top: 84px;
-    margin-left: 8px;
+    margin-top: 82px;
     display: grid;
     grid-template-columns: 70px 100px 90px 96px;
     grid-template-rows: 49px 16px;
@@ -194,61 +208,401 @@ p {
 }
 
 .curtain__1 {
-    position: absolute;
-    width: 538px;
-    height: 656px;
-    left: 604px;
-    top: 168px;
-
-    /*background: url("/assets/img/yellowcurtain.png");*/
+    /*background: url("../img/yellowcurtain.png");*/
     filter: drop-shadow(22px 40px 70px rgba(191, 145, 0, 0.33));
-}
-
-.circle {
-    position: absolute;
-    width: 852px;
-    height: 852px;
-    left: 840px;
-    top: 126px;
-    z-index: -1;
-
+    margin-top: 94px;
+    margin-right: 62px;
 }
 
 .p__characteristic1 {
-    font-family: "FuturaPT-Medium", sans-serif;
-    font-style: normal;
-    font-weight: 450;
+    font-family: "FuturaPTMedium", sans-serif;
     font-size: 40px;
     line-height: 51px;
     letter-spacing: 0.1em;
     color: #314961;
-    margin-left: 618px;
-    margin-top: 282px;
+    margin-top: 100px;
+    margin-bottom: 14px;
+
 }
 
 .p__characteristic2 {
-    font-family: "FuturaPT-Medium", sans-serif;
-    font-style: normal;
-    font-weight: 450;
+    font-family: "FuturaPTMedium", sans-serif;
     font-size: 40px;
     line-height: 51px;
     letter-spacing: 0.1em;
     color: #314961;
-    margin-left: 60px;
-    margin-top: 570px;
+    margin-top: 14px;
+    margin-left: -2px;
 }
 
 .p__characteristic3 {
-    font-family: "FuturaPT-Medium", sans-serif;
-    font-weight: 450;
+    font-family: "FuturaPTMedium", sans-serif;
     font-size: 40px;
     line-height: 51px;
     letter-spacing: 0.1em;
     color: #314961;
-    display: block;
-    width: 218px;
+    width: 220px;
     height: 102px;
-    margin-left: 774px;
-    margin-top: 270px;
+    margin-left: 38px;
 
+
+}
+
+.section_types_of_curtains {
+    display: flex;
+    flex-flow: row;
+    justify-content: space-around;
+    margin-top: 180px;
+    margin-left: 62px;
+    margin-right: 62px;
+}
+
+.div_types_of_curtains {
+    display: flex;
+    flex-flow: column;
+}
+
+.type_of_curtain {
+    margin-top: 120px;
+    margin-left: 162px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+
+}
+
+.gradient {
+    margin-top: 168px;
+    background: linear-gradient(180deg, #F3F7FE 0%, rgba(249, 251, 255, 0) 100%);
+}
+
+.title {
+    padding-top: 146px;
+}
+
+.choosing {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 46px;
+    line-height: 59px;
+    letter-spacing: 0.1em;
+    color: #314961;
+    text-align: center;
+
+}
+
+.exclusive {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+    line-height: 30px;
+    color: #000000;
+    text-align: center;
+    align-items: center;
+    margin-top: 6px;
+}
+
+.section__cornices {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+    color: #314961;
+    width: 248px;
+}
+
+.variant {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 26px;
+    color: #A9B7C6;
+    width: 308px;
+    margin-top: 14px;
+
+}
+
+.cornices {
+    margin-top: 136px;
+    display: flex;
+    flex-flow: row;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.div__cornices {
+    display: flex;
+    flex-flow: column;
+    margin-right: 90px;
+    margin-left: 152px;
+}
+
+.arrow {
+    margin-left: 46px;
+    margin-right: 62px;
+}
+
+.cornices__rope {
+    display: flex;
+    flex-flow: row;
+}
+
+.chain__p {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #12253B;
+}
+
+.chain__p1 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #12253B;
+    margin-bottom: 20px;
+}
+
+.chain__p2 {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 24px;
+    color: #12253B;
+    margin-top: 20px;
+}
+
+.chain__flex {
+    display: flex;
+    flex-flow: row;
+    margin-left: 156px;
+    margin-top: 176px;
+}
+
+.chain__flex__div {
+    display: flex;
+    flex-flow: column;
+    margin-right: 42px;
+}
+
+.chain__cornices {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 32px;
+    line-height: 41px;
+    letter-spacing: 0.06em;
+    width: 236px;
+    color: #314961;
+    margin-bottom: 34px;
+}
+
+.chain__characteristic {
+    display: flex;
+    flex-flow: column;
+    margin-top: 38px;
+    margin-left: 90px;
+}
+
+.list {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #A9B7C6;
+    width: 197px;
+    margin-bottom: 16px;
+    margin-left: 18px;
+    position: relative;
+
+}
+
+.blue__circle {
+    position: absolute;
+    left: -18px;
+    top: 6px
+}
+
+.border {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 52px;
+    line-height: 67px;
+    letter-spacing: 0.04em;
+    color: #314961;
+}
+
+.eight__variants {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 24px;
+    color: #666666;
+
+}
+
+.eight {
+    color: #2B8CFC;
+}
+
+.types {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 16px;
+    line-height: 21px;
+    letter-spacing: 0.04em;
+    color: #FFFFFF;
+    background: #314961;
+    opacity: 0.8;
+    display: inline-block;
+    padding: 6px 12px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.grid {
+    display: grid;
+    grid-template-areas: "area area jester chess hayway"
+    "luvers king horizont viktoria strimduo";
+    grid-gap: 36px;
+    align-items: center;
+    margin-left: 60px;
+    margin-right: 60px;
+    margin-top: 98px;
+}
+
+.area {
+    grid-area: area;
+}
+
+.chess {
+    grid-area: chess;
+}
+
+.jester {
+    grid-area: jester;
+
+}
+
+.hayway {
+    grid-area: hayway;
+
+}
+
+.king {
+    grid-area: king;
+
+}
+
+.luvers {
+    grid-area: luvers;
+
+}
+
+.horizont {
+    grid-area: horizont;
+
+}
+
+.viktoria {
+    grid-area: viktoria;
+
+}
+
+.strimduo {
+    grid-area: strimduo;
+
+}
+
+.item {
+    position: relative;
+}
+
+.day__night {
+    margin-top: 134px;
+}
+
+.p__day__night {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 60px;
+    line-height: 77px;
+    letter-spacing: 0.04em;
+    color: #FFCF23;
+    margin-top: 10px;
+}
+
+.night {
+    color: #314961;
+}
+
+.p__curtain__day__night {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 24px;
+    color: #666666;
+    width: 348px;
+    margin-top: 10px;
+}
+
+.span__day__night {
+    color: #2B8CFC;
+}
+
+.div__day__night {
+    display: inline-block;
+    padding: 84px 66px 136px 76px;
+    background: #F7F8F9;
+    box-shadow: 22px 28px 62px rgba(18, 37, 59, 0.14);
+    position: absolute;
+    top: 138px;
+    left: 604px;
+}
+
+.curtain__day__night {
+    position: relative;
+}
+
+.types__of__cornices {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 46px;
+    line-height: 59px;
+    letter-spacing: 0.04em;
+    color: #314961;
+    margin-top: 156px;
+    text-align: center;
+}
+
+.p__types__of__cornices {
+    font-family: "FuturaPTMedium", sans-serif;
+    font-size: 28px;
+    line-height: 36px;
+    letter-spacing: 0.04em;
+    color: #314961;
+    width: 298px;
+}
+.description {
+    font-family: 'Roboto', sans-serif;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: 24px;
+    color: #6A88A6;
+    margin-top: 8px;
+    margin-bottom: 32px;
+}
+.flex__types__of__cornices{
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-left: 60px;
+    margin-right: 58px;
+    margin-top: 78px;
+}
+.div__types__of__cornices{
+    display: flex;
+    flex-flow: column;
 }
